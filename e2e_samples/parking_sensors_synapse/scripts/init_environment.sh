@@ -2,6 +2,11 @@
 
 # check required variables are specified.
 
+GITHUB_REPO=Jiarca/modern-data-warehouse-dataops
+
+GITHUB_PAT_TOKEN=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
+
+
 if [ -z "$GITHUB_REPO" ]
 then 
     echo "Please specify a github repo using the GITHUB_REPO environment variable in this form '<my_github_handle>/<repo>'. (ei. 'devlace/mdw-dataops-import')"

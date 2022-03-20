@@ -41,6 +41,8 @@ set -o nounset
 ###############
 # Setup Github service connection
 
+GITHUB_REPO=Jiarca/modern-data-warehouse-dataops
+
 github_sc_name="${PROJECT}-github"
 export AZURE_DEVOPS_EXT_GITHUB_PAT=$GITHUB_PAT_TOKEN
 

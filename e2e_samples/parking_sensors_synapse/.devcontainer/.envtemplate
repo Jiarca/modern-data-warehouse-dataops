@@ -2,31 +2,32 @@
 # REQUIRED. Azure DevOps details used in "az devops configure" when devcontainer is built
 
 # Target Azure DevOps project where Azure Pipelines and Variable groups will be deploy
-AZDO_PROJECT=
+AZDO_PROJECT=modern-data-warehouse-dataops_synapse
 
 # Target Azure DevOps Organization of Azure DevOps project in this form `https://dev.azure.com/<organization>/`. (ei. https://dev.azure.com/my_azdo_org/)
-AZDO_ORGANIZATION_URL=
+AZDO_ORGANIZATION_URL=https://dev.azure.com/craignevillewalker/
 
-
+echo "Hello World"
 ###
 # REQUIRED. Environment variables for deployment script
 
 # Name of your imported github repo in this form `<my_github_handle>/<repo>`. (ei. "devlace/mdw-dataops-import")
-GITHUB_REPO=
+GITHUB_REPO=Jiarca/modern-data-warehouse-dataops
 
 # a Github PAT token. Generate them [here](https://github.com/settings/tokens). This requires "repo" scope.
-GITHUB_PAT_TOKEN=
+GITHUB_PAT_TOKEN=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
 
+az devops configure --defaults organization="$AZDO_ORGANIZATION_URL" project="$AZDO_PROJECT"
 
 ###
 # OPTIONAL. Environment variables for deployment script.
 # Uncomment to set values.
 
 # Azure location to deploy resources. Default: westus
-# AZURE_LOCATION=
+# AZURE_LOCATION=australiaeast
 
 # Azure subscription id to use to deploy resources. Default: default azure subscription.
-# AZURE_SUBSCRIPTION_ID=
+# AZURE_SUBSCRIPTION_ID=d1762948-4e8a-4ec6-a6f9-1a1fa64f9813
 
 # String appended to all resource names to ensure uniqueness of azure resource names. Default: random five character string
 # DEPLOYMENT_ID=
@@ -35,6 +36,6 @@ GITHUB_PAT_TOKEN=
 # AZDO_PIPELINES_BRANCH_NAME=
 
 # Password of the Synapse SQL instance. Default: random string
-# SYNAPSE_SQL_PASSWORD=
+# SYNAPSE_SQL_PASSWORD=galaxy!123
 
 
